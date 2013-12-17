@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Deals</title>
+    <link href="Content/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="Content/css/bootstrap.css" rel="stylesheet"/>
+    <script src="Vendor/jQuery.min.js"></script>
+</head>
+<body ng-app="houseDeal">
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-2">
+            <ul class="nav nav-pills nav-stacked" ng-controller="homeCtrl">
+                <li ><a class="{{menu.name}}" href="#{{menu.name}}" ng-repeat="menu in menuItems" ng-click="setMenu(menu)">{{menu.name|uppercase}}</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-10">
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="Vendor/angular.js"></script>
+<script src="Vendor/angular-ui-router.js"></script>
+<script src="Vendor/ui-bootstrap-0.7.0.js"></script>
+<script src="Vendor/bootstrap.js"></script>
+<script src="app.js"></script>
+<!--Services-->
+<script src="Services/menuService.js"></script>
+<!--Controllers-->
+<script src="Controllers/homeCtrl.js"></script>
+<script src="Controllers/addPropertyCtrl.js"></script>
+<script src="Controllers/searchCtrl.js"></script>
+<script src="Controllers/registerCtrl.js"></script>
+<!--Directive-->
+<script src="Directives/fetchCitiesDirective.js"></script>
+
+</body>
+</html>

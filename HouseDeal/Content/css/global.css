@@ -1,0 +1,30 @@
+﻿body {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+nav.home .home,
+nav.add .add,
+nav.search .search
+{}
+
+
+.closed {
+    display: none;
+}
+.expander {
+    border: 1px solid gray;
+    width: 250px;
+}
+
+.expander > title {
+    color: white;
+    background-color: black;
+    padding:  .1em .3em;
+    cursor: pointer;
+}
+
+.expander > body {
+    padding: .1em .3em;
+}
